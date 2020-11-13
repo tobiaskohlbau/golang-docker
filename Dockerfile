@@ -50,7 +50,7 @@ RUN set -eux; \
 # https://github.com/golang/go/issues/38536#issuecomment-616897960
 	repo='https://go.googlesource.com/go'; \
         \
-	git clone "$repo" /usr/local/go; \
+	git clone --depth 1 "$repo" /usr/local/go; \
 	\
         echo "#include <unistd.h>" > /usr/include/sys/unistd.h; \
 	\
